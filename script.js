@@ -1,9 +1,16 @@
-// Cambiar color de fondo
-const colores = ["#e0f7fa", "#ffd6cc", "#ccffcc", "#fff0cc", "#f0ccff"];
-let i = 0;
+// Gradientes dinámicos para el fondo
+const gradientes = [
+  "linear-gradient(135deg, #e0f7fa, #ffffff)",
+  "linear-gradient(135deg, #ffd6cc, #fff0f0)",
+  "linear-gradient(135deg, #ccffcc, #f0fff0)",
+  "linear-gradient(135deg, #fff0cc, #fffaf0)",
+  "linear-gradient(135deg, #f0ccff, #f8f0ff)"
+];
+let indice = 0;
+
 function cambiarColor() {
-    i = (i + 1) % colores.length;
-    document.body.style.backgroundColor = colores[i];
+    indice = (indice + 1) % gradientes.length;
+    document.body.style.background = gradientes[indice];
 }
 
 // Saludo
@@ -53,6 +60,7 @@ window.addEventListener("scroll", () => {
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
 }
+
 
 
 
