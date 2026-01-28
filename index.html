@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Profesional</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,9 +28,11 @@
     <div class="card animate-card">
       <img src="foto.jpg" alt="Mi Foto" class="avatar animate-avatar">
       <h1 id="nombre" class="animate-text">Tu Nombre</h1>
-      <p id="descripcion" class="animate-text">Aprendiendo desarrollo web 💻</p>
-      <button class="btn" onclick="cambiarColor()">Cambiar color</button>
-      <button class="btn" onclick="saludar()">Saludar</button>
+      <p id="descripcion" class="animate-text">Desarrollador web en aprendizaje 💻</p>
+      <div class="btn-group">
+        <button class="btn" onclick="cambiarColor()">Cambiar color</button>
+        <button class="btn" onclick="saludar()">Saludar</button>
+      </div>
       <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
       <button class="btn" onclick="mostrarNombre()">Enviar</button>
     </div>
@@ -34,39 +41,54 @@
   <!-- SECCIÓN SOBRE MÍ -->
   <section id="sobre-mi" class="section animate-section">
     <h2>Sobre mí</h2>
-    <p>Soy un desarrollador web en aprendizaje, me encanta crear páginas interactivas y responsivas. Mi objetivo es convertir ideas en experiencias digitales.</p>
+    <p>Soy un desarrollador web apasionado por crear experiencias digitales elegantes y funcionales. Me encanta aprender nuevas tecnologías y mejorar cada día.</p>
   </section>
 
   <!-- SECCIÓN PROYECTOS -->
   <section id="proyectos" class="section animate-section">
     <h2>Proyectos</h2>
-    <div class="proyecto-card animate-card">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve del proyecto 1.</p>
-    </div>
-    <div class="proyecto-card animate-card">
-      <h3>Proyecto 2</h3>
-      <p>Descripción breve del proyecto 2.</p>
+    <div class="proyecto-container">
+      <div class="proyecto-card animate-card">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto 1.</p>
+      </div>
+      <div class="proyecto-card animate-card">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto 2.</p>
+      </div>
+      <div class="proyecto-card animate-card">
+        <h3>Proyecto 3</h3>
+        <p>Descripción breve del proyecto 3.</p>
+      </div>
     </div>
   </section>
 
   <!-- SECCIÓN CONTACTO -->
   <section id="contacto" class="section animate-section">
     <h2>Contacto</h2>
-    <input type="text" id="mensajeNombre" placeholder="Tu nombre">
-    <input type="email" id="mensajeEmail" placeholder="Tu email">
-    <textarea id="mensajeTexto" placeholder="Tu mensaje"></textarea>
-    <button class="btn" onclick="enviarMensaje()">Enviar mensaje</button>
+    <div class="contact-form">
+      <input type="text" id="mensajeNombre" placeholder="Tu nombre">
+      <input type="email" id="mensajeEmail" placeholder="Tu email">
+      <textarea id="mensajeTexto" placeholder="Tu mensaje"></textarea>
+      <button class="btn" onclick="enviarMensaje()">Enviar mensaje</button>
+    </div>
   </section>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Tu Nombre. Sígueme en redes: <a href="#">Instagram</a> | <a href="#">GitHub</a></p>
+    <p>&copy; 2026 Tu Nombre | Sígueme en redes: 
+      <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+    </p>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
