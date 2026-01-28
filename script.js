@@ -1,13 +1,23 @@
 function cambiarColor() {
-    document.body.style.backgroundColor = "#0a589d";
+    const colores = ["#cce7ff", "#ffd6cc", "#ccffcc", "#fff0cc"];
+    const colorActual = document.body.style.backgroundColor;
+    let nuevo = colores[Math.floor(Math.random() * colores.length)];
+    while (nuevo === colorActual) {
+        nuevo = colores[Math.floor(Math.random() * colores.length)];
+    }
+    document.body.style.backgroundColor = nuevo;
 }
 
 function saludar() {
-    alert("¡Hola! Bienvenido a mi web de amado 😄");
+    alert("¡Hola! Bienvenido a mi perfil 😄");
 }
 
 function mostrarNombre() {
-    let nombre = document.getElementById("nombre").value;
-    document.getElementById("descripcion").innerText =
-        "Hola, " + nombre + " 👋 Bienvenido a mi página";
+    const nombre = document.getElementById("nombreInput").value;
+    if (nombre.trim() === "") {
+        alert("Escribe algo primero 😅");
+        return;
+    }
+    document.getElementById("nombre").innerText = nombre;
+    document.getElementById("descripcion").innerText = "Bienvenido a mi web interactiva!";
 }
