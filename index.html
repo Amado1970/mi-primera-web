@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil Interactivo PRO</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- SECCIÓN INICIO -->
+  <section id="inicio" class="section">
     <div class="card animate-card">
-        <img src="foto.jpg" alt="Mi Foto" class="avatar animate-avatar">
-        <h1 id="nombre" class="animate-text">Tu Nombre</h1>
-        <p id="descripcion" class="animate-text">Aprendiendo desarrollo web 💻</p>
-
-        <button class="btn" onclick="cambiarColor()">Cambiar color</button>
-        <button class="btn" onclick="saludar()">Saludar</button>
-
-        <br><br>
-
-        <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
-        <button class="btn" onclick="mostrarNombre()">Enviar</button>
+      <img src="foto.jpg" alt="Mi Foto" class="avatar animate-avatar">
+      <h1 id="nombre" class="animate-text">Tu Nombre</h1>
+      <p id="descripcion" class="animate-text">Aprendiendo desarrollo web 💻</p>
+      <button class="btn" onclick="cambiarColor()">Cambiar color</button>
+      <button class="btn" onclick="saludar()">Saludar</button>
+      <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
+      <button class="btn" onclick="mostrarNombre()">Enviar</button>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- SECCIÓN SOBRE MÍ -->
+  <section id="sobre-mi" class="section animate-section">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador web en aprendizaje, me encanta crear páginas interactivas y responsivas. Mi objetivo es convertir ideas en experiencias digitales.</p>
+  </section>
+
+  <!-- SECCIÓN PROYECTOS -->
+  <section id="proyectos" class="section animate-section">
+    <h2>Proyectos</h2>
+    <div class="proyecto-card animate-card">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto 1.</p>
+    </div>
+    <div class="proyecto-card animate-card">
+      <h3>Proyecto 2</h3>
+      <p>Descripción breve del proyecto 2.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="section animate-section">
+    <h2>Contacto</h2>
+    <input type="text" id="mensajeNombre" placeholder="Tu nombre">
+    <input type="email" id="mensajeEmail" placeholder="Tu email">
+    <textarea id="mensajeTexto" placeholder="Tu mensaje"></textarea>
+    <button class="btn" onclick="enviarMensaje()">Enviar mensaje</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Tu Nombre. Sígueme en redes: <a href="#">Instagram</a> | <a href="#">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-</body>
-</html>
+
 
 
