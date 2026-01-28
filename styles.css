@@ -24,4 +24,24 @@ button {
 input {
     padding: 8px;
     width: 80%;
+
+}
+@media (max-width: 600px) {
+    body {
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
