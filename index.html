@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil Interactivo</title>
+    <title>Mi Perfil Interactivo PRO</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="card">
-        <img src="foto.jpg" alt="Mi Foto" class="avatar">
-        <h1 id="nombre">Tu Nombre</h1>
-        <p id="descripcion">Aprendiendo desarrollo web 💻</p>
+    <div class="card animate-card">
+        <img src="foto.jpg" alt="Mi Foto" class="avatar animate-avatar">
+        <h1 id="nombre" class="animate-text">Tu Nombre</h1>
+        <p id="descripcion" class="animate-text">Aprendiendo desarrollo web 💻</p>
 
-        <button onclick="cambiarColor()">Cambiar color</button>
-        <button onclick="saludar()">Saludar</button>
+        <button class="btn" onclick="cambiarColor()">Cambiar color</button>
+        <button class="btn" onclick="saludar()">Saludar</button>
 
         <br><br>
 
         <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
-        <button onclick="mostrarNombre()">Enviar</button>
+        <button class="btn" onclick="mostrarNombre()">Enviar</button>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+</body>
+</html>
+
 
