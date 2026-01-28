@@ -1,3 +1,12 @@
+/* GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eaeaea;
+  padding-top: 60px; /* espacio para menú fijo */
+  transition: background 0.5s;
+}
+
 /* MENÚ FIJO */
 header {
   position: fixed;
@@ -8,7 +17,6 @@ header {
   padding: 10px 0;
   text-align: center;
 }
-
 header .menu a {
   color: white;
   margin: 0 15px;
@@ -16,46 +24,13 @@ header .menu a {
   font-weight: bold;
   transition: color 0.3s;
 }
-
-header .menu a:hover {
-  color: #0077ff;
-}
-
-/* PARA QUE EL CONTENIDO NO SE PISE CON EL MENÚ */
-body {
-  padding-top: 60px; /* altura del header */
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #eaeaea;
-  transition: background 0.5s;
-}
+header .menu a:hover { color: #0077ff; }
 
 /* SECCIONES */
 .section {
   padding: 80px 20px;
   text-align: center;
-  min-height: 100vh; /* para que cada sección ocupe la pantalla */
-}
-
-/* ANIMACIONES */
-.animate-card { animation-delay: 0.2s; }
-.animate-avatar { animation-delay: 0.4s; }
-.animate-text { animation-delay: 0.6s; }
-.animate-section { animation-delay: 0.8s; }
-
-.animate-section {
-  opacity: 0;
-  animation: fadeIn 1s forwards 0.5s;
-}
-
-@keyframes slideUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; transform: translateY(0); }
+  min-height: 100vh;
 }
 
 /* TARJETA INICIO */
@@ -68,7 +43,6 @@ body {
   max-width: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
 
 .avatar { width: 100px; border-radius: 50%; margin-bottom: 15px; transition: transform 0.5s; }
@@ -86,7 +60,6 @@ h1, h2, p { margin: 10px 0; }
   color: white;
   transition: background 0.3s, transform 0.2s;
 }
-
 .btn:hover { background-color: #005bb5; transform: scale(1.05); }
 
 /* PROYECTOS */
@@ -114,10 +87,20 @@ footer {
 }
 footer a { color: #0077ff; text-decoration: none; }
 
+/* ANIMACIONES */
+.animate-card { opacity: 0; transform: translateY(50px); animation: slideUp 0.8s forwards 0.2s; }
+.animate-avatar { opacity: 0; transform: translateY(-20px); animation: fadeIn 1s forwards 0.4s; }
+.animate-text { opacity: 0; animation: fadeIn 1s forwards 0.6s; }
+.animate-section { opacity: 0; animation: fadeIn 1s forwards 0.8s; }
+
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .card, .proyecto-card { width: 90%; padding: 20px; }
   .btn { width: 100%; margin-top: 10px; }
+  header .menu a { display: block; margin: 5px 0; }
 }
 
 
