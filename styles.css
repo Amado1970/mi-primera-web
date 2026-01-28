@@ -25,6 +25,7 @@ header .menu a {
   transition: color 0.3s;
 }
 header .menu a:hover { color: #0077ff; }
+header .menu a.active { color: #ffd700; } /* sección activa */
 
 /* SECCIONES */
 .section {
@@ -96,12 +97,16 @@ footer a { color: #0077ff; text-decoration: none; }
 @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
+/* SCROLL SUAVE */
+html { scroll-behavior: smooth; }
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .card, .proyecto-card { width: 90%; padding: 20px; }
   .btn { width: 100%; margin-top: 10px; }
   header .menu a { display: block; margin: 5px 0; }
 }
+
 
 
 
