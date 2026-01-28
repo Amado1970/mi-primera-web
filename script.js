@@ -1,3 +1,4 @@
+// Colores de fondo
 const colores = ["#cce7ff", "#ffd6cc", "#ccffcc", "#fff0cc", "#f0ccff"];
 let i = 0;
 
@@ -7,16 +8,27 @@ function cambiarColor() {
 }
 
 function saludar() {
-    alert("¡Hola! Bienvenido a mi perfil 😄");
+    alert("¡Hola! Bienvenido a mi portafolio 😄");
 }
 
 function mostrarNombre() {
     const nombre = document.getElementById("nombreInput").value;
-    if (nombre.trim() === "") {
-        alert("Escribe algo primero 😅");
-        return;
-    }
+    if(nombre.trim() === "") { alert("Escribe algo primero 😅"); return; }
     document.getElementById("nombre").innerText = nombre;
-    document.getElementById("descripcion").innerText = "Bienvenido a mi web interactiva!";
+    document.getElementById("descripcion").innerText = "Bienvenido a mi portafolio interactivo!";
 }
+
+// Contacto (simulado)
+function enviarMensaje() {
+    const nombre = document.getElementById("mensajeNombre").value;
+    const email = document.getElementById("mensajeEmail").value;
+    const mensaje = document.getElementById("mensajeTexto").value;
+
+    if(!nombre || !email || !mensaje) { alert("Completa todos los campos 😅"); return; }
+
+    alert(`¡Gracias, ${nombre}! Tu mensaje fue enviado (simulado).`);
+    document.getElementById("mensajeNombre").value = "";
+    document.getElementById("mensajeEmail").value = "";
+    document.getElementById("mensajeTexto").value = "";
+
 
