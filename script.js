@@ -1,3 +1,4 @@
+// Cambiar color de fondo
 const colores = ["#cce7ff", "#ffd6cc", "#ccffcc", "#fff0cc", "#f0ccff"];
 let i = 0;
 
@@ -6,10 +7,12 @@ function cambiarColor() {
     document.body.style.backgroundColor = colores[i];
 }
 
+// Saludo
 function saludar() {
     alert("¡Hola! Bienvenido a mi portafolio 😄");
 }
 
+// Mostrar nombre dinámico
 function mostrarNombre() {
     const nombre = document.getElementById("nombreInput").value;
     if(nombre.trim() === "") { alert("Escribe algo primero 😅"); return; }
@@ -17,6 +20,7 @@ function mostrarNombre() {
     document.getElementById("descripcion").innerText = "Bienvenido a mi portafolio interactivo!";
 }
 
+// Enviar mensaje simulado
 function enviarMensaje() {
     const nombre = document.getElementById("mensajeNombre").value;
     const email = document.getElementById("mensajeEmail").value;
@@ -29,7 +33,8 @@ function enviarMensaje() {
     document.getElementById("mensajeEmail").value = "";
     document.getElementById("mensajeTexto").value = "";
 }
-// Resaltar sección activa en el menú
+
+// Resaltar sección activa en menú
 const sections = document.querySelectorAll("section");
 const menuLinks = document.querySelectorAll("header .menu a");
 
