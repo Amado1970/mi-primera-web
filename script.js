@@ -31,7 +31,7 @@ function enviarMensaje() {
     document.getElementById("mensajeTexto").value = "";
 }
 
-// Resaltar sección activa en menú
+// Scrollspy y botón volver arriba
 const sections = document.querySelectorAll("section");
 const menuLinks = document.querySelectorAll("header .menu a");
 window.addEventListener("scroll", () => {
@@ -45,10 +45,14 @@ window.addEventListener("scroll", () => {
         if(link.getAttribute("href") === "#" + current) link.classList.add("active");
     });
 
-    // Mostrar botón scroll arriba
     const scrollTopBtn = document.getElementById("scrollTop");
     scrollTopBtn.style.display = (window.scrollY > 300) ? "block" : "none";
 });
+
+// Modo oscuro
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
 
 
 
