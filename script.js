@@ -29,5 +29,26 @@ function enviarMensaje() {
     document.getElementById("mensajeEmail").value = "";
     document.getElementById("mensajeTexto").value = "";
 }
+// Resaltar sección activa en el menú
+const sections = document.querySelectorAll("section");
+const menuLinks = document.querySelectorAll("header .menu a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70; // altura del header
+        if(pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    menuLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
 
 
