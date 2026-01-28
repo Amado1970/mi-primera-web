@@ -1,4 +1,3 @@
-// Colores de fondo
 const colores = ["#cce7ff", "#ffd6cc", "#ccffcc", "#fff0cc", "#f0ccff"];
 let i = 0;
 
@@ -18,7 +17,6 @@ function mostrarNombre() {
     document.getElementById("descripcion").innerText = "Bienvenido a mi portafolio interactivo!";
 }
 
-// Contacto (simulado)
 function enviarMensaje() {
     const nombre = document.getElementById("mensajeNombre").value;
     const email = document.getElementById("mensajeEmail").value;
@@ -30,5 +28,6 @@ function enviarMensaje() {
     document.getElementById("mensajeNombre").value = "";
     document.getElementById("mensajeEmail").value = "";
     document.getElementById("mensajeTexto").value = "";
+}
 
 
