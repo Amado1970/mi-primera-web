@@ -6,12 +6,15 @@
   <title>Mi Portafolio Profesional</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- BOTÓN MODO OSCURO/CLARO -->
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌓</button>
 
   <!-- MENÚ FIJO -->
   <header>
@@ -24,11 +27,11 @@
   </header>
 
   <!-- SECCIÓN INICIO -->
-  <section id="inicio" class="section">
+  <section id="inicio" class="section section-inicio">
     <div class="card animate-card">
       <img src="foto.jpg" alt="Mi Foto" class="avatar animate-avatar">
       <h1 id="nombre" class="animate-text">Tu Nombre</h1>
-      <p id="descripcion" class="animate-text">Desarrollador web en aprendizaje 💻</p>
+      <p id="descripcion" class="animate-text">Desarrollador web 💻 | Experiencias digitales modernas</p>
       <div class="btn-group">
         <button class="btn" onclick="cambiarColor()">Cambiar color</button>
         <button class="btn" onclick="saludar()">Saludar</button>
@@ -39,13 +42,13 @@
   </section>
 
   <!-- SECCIÓN SOBRE MÍ -->
-  <section id="sobre-mi" class="section animate-section">
+  <section id="sobre-mi" class="section section-sobre animate-section">
     <h2>Sobre mí</h2>
     <p>Soy un desarrollador web apasionado por crear experiencias digitales elegantes y funcionales. Me encanta aprender nuevas tecnologías y mejorar cada día.</p>
   </section>
 
   <!-- SECCIÓN PROYECTOS -->
-  <section id="proyectos" class="section animate-section">
+  <section id="proyectos" class="section section-proyectos animate-section">
     <h2>Proyectos</h2>
     <div class="proyecto-container">
       <div class="proyecto-card animate-card">
@@ -64,7 +67,7 @@
   </section>
 
   <!-- SECCIÓN CONTACTO -->
-  <section id="contacto" class="section animate-section">
+  <section id="contacto" class="section section-contacto animate-section">
     <h2>Contacto</h2>
     <div class="contact-form">
       <input type="text" id="mensajeNombre" placeholder="Tu nombre">
@@ -88,6 +91,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
