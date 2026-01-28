@@ -45,3 +45,244 @@ input {
         margin-top: 10px;
     }
 }
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+
+
+}
+
+.box{
+    background-image: url("../img/imgFondos/fondoBox.png");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    
+}
+
+
+.main-container > .login,
+.main-container > .hero-body{
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fuente/Poppins-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fuente/Poppins-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../fuente/Poppins-Light.otf');
+}
+
+
+.hero.is-link{
+    background: #1d4f91;
+}
+
+
+.tituloNbar{
+    font-family: 'Poppins-Bold';
+    font-size: 30px;
+    color: white;
+}
+
+.tituloDosNbar{
+    font-family: 'Poppins-Bold';
+    font-size: 17px;
+    color: rgb(216, 216, 216);
+}
+
+
+.titulo{
+    font-family: 'Poppins-Bold';
+    font-size: 20px;
+    color: rgb(83, 83, 83);
+}
+
+.subTitulo{
+    font-family: 'Poppins-Bold';
+    font-size: 15px;
+    color: rgb(51, 49, 49);
+}
+
+.subTituloB{
+    font-family: 'Poppins-Bold';
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+
+.letraViatico{
+    font-family: 'Poppins-Bold';
+    font-size: 26px;
+    color: rgb(192, 123, 33);
+}
+
+.letraMediana{
+    font-family: 'Poppins-Medium';
+    
+}
+
+.letraLigera{
+    font-family: 'Poppins-Light';
+}
+
+
+
+
+
+.navbar{
+    position: sticky;
+	top: 0;
+}
+
+.button-salir{
+    background: #fa4616;
+    width: 115px;
+    padding: 8px;
+    padding-left: 40PX;
+    border-radius: 20px;
+    margin: 0;
+    color: white;
+    
+}
+
+.button-salir:hover{
+    background: #d4390e;
+    color: white;
+    
+}
+
+
+.footer{
+    background: #fef4f2;
+}
+
+.itemsocial{
+    display: inline-block;
+    letter-spacing: 110px;
+}
+
+.itemtext h3{
+    font-family: 'Poppins-Medium';
+    letter-spacing: 25px;
+    color: #1d4f91;
+    font-size: 13px;
+    
+    
+}
+
+.textfooter{
+    font-family: 'Poppins-Light';
+    font-size: 12px;
+    color: #1d4f91;
+}
+
+.button-guardar{
+    background: #2d2926;
+    width: 135px;
+    padding: 18px;
+    padding-left: 20PX;
+    border-radius: 30px;
+    border: 0;
+    margin: 0;
+    color: white;
+    
+}
+
+.button-guardar:hover{
+    background: #6c6a68;
+    color: white;
+    
+}
+
+img.zoomable {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+img.zoomable:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal img {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 5% auto;
+}
+
+
+/* Los siguientes 4 selectores animan las tarjetas de los viajes en transito */
+.custom-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .card-content {
+    transition: background-color 0.3s ease;
+}
+
+.custom-card:hover .card-content {
+    background-color: #f9f9f9;
+}
